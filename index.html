@@ -5,90 +5,200 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panda Commerce</title>
-    <link rel="stylesheet" href="/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+
+        .search-btn{
+            background: #ff3b85;
+            color: #fff;
+        }
+        .search-btn:hover{
+            color: #fff;
+            background: #ca175c;
+        }
+        .banner-bg{
+            background: #FEEAE9;
+        }
+
+        .price{
+            color: #FF3B85;
+        }
+
+        .custom-btn{
+            border: none;
+            background: linear-gradient(to top, #ff3b85, #ff70a7);
+            color:#fff;
+            padding: 5px 25px;
+            border-radius: 10px;
+            transition: .5s;
+        }
+
+        .sb-btn{
+            border: none;
+            background: #000;
+            color:#fff;
+            padding: 5px 25px;
+            border-radius: 5px;
+            transition: 1s;
+        }
+        .sb-btn:hover{
+            background: linear-gradient(to top, #ff3b85, #ff70a7);
+            
+
+        }
+
+
+
+
+        .sb-btn i{
+            margin-left: 10px;
+        }
+        .custom-btn i{
+            margin-left: 10px;
+        }
+
+        .cat-item{
+            border-radius: 10px;
+        }
+        .cat-item h2{
+            color: #fff;
+        }
+        .cat-item img{
+            width: 100px;
+        }
+
+
+        .cat-1{
+            background: linear-gradient(90deg, #FFA033, #FFCE1A);
+        }
+        .cat-2{
+            background: linear-gradient(90deg, #FF1A73, #ff62a1);
+        }
+        .cat-3{
+            background: linear-gradient(90deg, #427BFE, #3F07F8);
+        }
+
+        .shoes, .bag{
+            background: #F8F8F8;
+        }
+
+        .card{
+            border: none;
+            border-radius: 15px;
+            box-shadow: 5px 5px 10px lightgray;
+        }
+
+        .inner-contact{
+          background: #FEEAE9;
+        }
+
+        .form input{
+          border: none;
+          padding: 5px 20px;
+               
+        }
+
+        .in-txt{
+          border-radius: 5px 0px 0px 5px;
+        }
+
+
+        .send-btn{
+          background: #FF3B85;
+          color: #fff;
+          border-radius:  0px 5px 5px 0px;
+        }
+    
+
+    </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="#"><img src="./images/logo.png" alt="logo"></a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                      <li class="nav-item">
+        <nav class="navbar navbar-expand-lg navbar-light  bg-light fixed-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="./images/logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                </button>
+                <form class="d-md-flex d-none">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn search-btn" type="submit">Search</button>
+                </form>
+                <div class="collapse navbar-collapse  " id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#shoes">Shoes</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#backpack">Backpack</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link"  href="#contact">Contact Us</a>
-                      </li>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                        </li>
                     </ul>
-                  </div>
                 </div>
-              </nav>
-        </div>
+            </div>
+        </nav>
     </header>
 
-    <section id="banner">
-        <div class="container">
-            <div id="carouselExampleControls" class="carousel slide cutom-bg" data-bs-ride="carousel">
+    <section class="pt-5" id="banner">
+        <div class="container py-5">
+            <div id="carouselExampleIndicators" class="carousel slide banner-bg" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
-                      <div class="row d-flex align-items-center">
-                          <div class="col-md-7">
-                              <h1 class="text-uppercase">Mi LED Tv 4A PRO 32</h1>
-                              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, id corporis? Veritatis error distinctio nisi.</p>
-                              <h1 class="price">$1200</h1>
-                              <button class="custom-buy-btn">Buy Now <i class="fas fas fa-angle-right"></i></button>
+                  <div class="carousel-item py-3 active">
+                      <div class="row d-flex justify-content-between align-items-center px-5">
+                          <div class="col-md-8">
+                              <h1>Mi LED TV 4A PRO 32</h1>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, vitae. Aut qui veniam soluta doloremque iste quisquam tempora. Modi est accusantium doloremque sapiente optio cumque, esse maxime necessitatibus nemo impedit.</p>
+                              <h1 class="price">$1289</h1>
+                              <button class="custom-btn">Buy Now<i class="fas fa-angle-right"></i></button>
                           </div>
-                          <div class="col-md-5">
-                            <img src="/images/banner-images/tv.png" class="d-block w-100" alt="">
+                          <div class="col-md-4">
+                            <img src="images/banner-images/tv.png" class="d-block w-100" alt="...">
                           </div>
                       </div>
                   </div>
-                  <div class="carousel-item ">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-md-7">
-                            <h1 class="text-uppercase">Cool dude headphone</h1>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, id corporis? Veritatis error distinctio nisi.</p>
+                  <div class="carousel-item py-3 ">
+                    <div class="row d-flex justify-content-between align-items-center px-5">
+                        <div class="col-md-8">
+                            <h1>Cool Dude Headphone</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, vitae. Aut qui veniam soluta doloremque iste quisquam tempora. Modi est accusantium doloremque sapiente optio cumque, esse maxime necessitatibus nemo impedit.</p>
+                            <h1 class="price">$650</h1>
+                            <button class="custom-btn">Buy Now<i class="fas fa-angle-right"></i></button>
+                        </div>
+                        <div class="col-md-4">
+                          <img src="images/banner-images/headphone.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item py-3">
+                    <div class="row d-flex justify-content-between align-items-center px-5">
+                        <div class="col-md-8">
+                            <h1>X-Box Pro</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, vitae. Aut qui veniam soluta doloremque iste quisquam tempora. Modi est accusantium doloremque sapiente optio cumque, esse maxime necessitatibus nemo impedit.</p>
                             <h1 class="price">$420</h1>
-                            <button class="custom-buy-btn">Buy Now <i class="fas fas fa-angle-right"></i></button>   
+                            <button class="custom-btn">Buy Now<i class="fas fa-angle-right"></i></button>
                         </div>
-                        <div class="col-md-5">
-                          <img src="/images/banner-images/headphone.png" class="d-block w-100" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item ">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-md-7">
-                            <h1 class="text-uppercase">X-Box For your living room</h1>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, id corporis? Veritatis error distinctio nisi.</p>
-                            <h1 class="price">$600</h1>
-                            <button class="custom-buy-btn">Buy Now <i class="fas fas fa-angle-right"></i></button>
-                        </div>
-                        <div class="col-md-5">
-                          <img src="/images/banner-images/xbox.png" class="d-block w-100" alt="">
+                        <div class="col-md-4">
+                          <img src="images/banner-images/xbox.png" class="d-block w-100" alt="...">
                         </div>
                     </div>
                 </div>
-                  
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
@@ -96,80 +206,153 @@
         </div>
     </section>
 
-    <section id="catagory">
-        <div class="container">
+    <section class="category py-3">
+        <div class="container py-2">
+            <div class="section-title pb-3">
+                <h3>Categories</h3>
+            </div>
             <div class="row">
                 <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="catg-1 d-flex align-items-center justify-content-between">
-                        <h1 class="text-white">Watch</h1>
-                        <img src="/images/categories/watch.png" alt="">
+                    <div class="cat-1 cat-item d-flex align-items-center justify-content-between px-3 py-2">
+                        <h2>Watch</h2>
+                        <img src="images/categories/watch.png" alt="">
                     </div>
                 </div>
                 <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="catg-2 d-flex align-items-center justify-content-between">
-                        <h1 class="text-white">Bag</h1>
-                        <img src="/images/categories/bag.png" alt="">
+                    <div class="cat-2 cat-item d-flex align-items-center justify-content-between px-3 py-2">
+                        <h2>Bag</h2>
+                        <img src="images/categories/bag.png" alt="">
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="catg-3 d-flex align-items-center justify-content-between">
-                        <h1 class="text-white">Shoes</h1>
-                        <img src="/images/categories/shoes.png" alt="">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="cat-3 cat-item d-flex align-items-center justify-content-between px-3 py-2">
+                        <h2>Shoes</h2>
+                        <img src="images/categories/shoes.png" alt="">
                     </div>
                 </div>
-                
             </div>
         </div>
     </section>
-    
-    <section id="shoes">
-        <div class="container">
+
+    <section class="py-5 shoes" id="shoes">
+        <div class="container py-4">
+            <div class="section-title pb-3 d-flex align-items-center justify-content-between">
+                <h3>Shoes</h3>
+                <a href="#" class="text-decoration-none text-warning">See All</a>
+            </div>
+
             <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col ">
+                <div class="col">
                   <div class="card h-100">
-                    <img src="./images/shoes/shoe-1.png" class="card-img-top" alt="">
-                    <div class="card-body">
-                      <h5 class="card-title">Supply 350</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <h5>$120</h5>
-                      <button class="custom-buy-btn">Buy Now <i class="fas fas fa-angle-right"></i></button>
-
+                    <img src="images/shoes/shoe-1.png" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Reebok Dart Men's Shoes</h5>
+                      <p class="card-text py-3">This is a wider card with supporting text below as a natural lead-in to </p>
+                      <h4>$999</h4>
+                      <button class="sb-btn my-3">Buy Now<i class="fas fa-angle-right"></i></button>
                     </div>
                     
                   </div>
                 </div>
                 <div class="col">
                   <div class="card h-100">
-                    <img src="./images/shoes/shoe-2.png" class="card-img-top" alt="">
-                    <div class="card-body">
-                      <h5 class="card-title">Nike 320</h5>
-                      <p class="card-text">This card has to supporting text below as a natural lead-in to super additional text  are   content.</p>
-                      <h5>$320</h5>
-                      <button class="custom-buy-btn">Buy Now <i class="fas fas fa-angle-right"></i></button>
-
+                    <img src="images/shoes/shoe-2.png" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Reebok Pump</h5>
+                      <p class="card-text py-3">This card has supporting text below as a natural lead-in to additional content.</p>
+                      <h4>$799</h4>
+                      <button class="sb-btn my-3">Buy Now<i class="fas fa-angle-right"></i></button>
                     </div>
                     
                   </div>
                 </div>
                 <div class="col">
                   <div class="card h-100">
-                    <img src="./images/shoes/shoe-3.png" class="card-img-top" alt="">
-                    <div class="card-body">
-                      <h5 class="card-title">Red Max</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                      <h5>$350</h5>
-                      <button class="custom-buy-btn">Buy Now <i class="fas fas fa-angle-right"></i></button>
-
+                    <img src="images/shoes/shoe-3.png" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Reebok All Terrian</h5>
+                      <p class="card-text py-3">This is a wider card with supporting text below as a natural additional content.</p>
+                      <h4>$699</h4>
+                      <button class="sb-btn my-3">Buy Now<i class="fas fa-angle-right"></i></button>
                     </div>
                     
                   </div>
                 </div>
               </div>
+
+        </div>
+    </section>
+    
+
+    <section class="py-5 bag" id="bag">
+        <div class="container py-4">
+            <div class="section-title pb-3 d-flex align-items-center justify-content-between">
+                <h3>Bags</h3>
+                <a href="#" class="text-decoration-none text-warning">See All</a>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="images/bags/bag-1.png" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Reebok Dart Men's Shoes</h5>
+                      <p class="card-text py-3">This is a wider card with supporting text below as a natural lead-in to </p>
+                      <h4>$1099</h4>
+                      <button class="sb-btn my-3">Buy Now<i class="fas fa-angle-right"></i></button>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="images/bags/bag-2.png" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Reebok Pump</h5>
+                      <p class="card-text py-3">This card has supporting text below as a natural lead-in to additional content.</p>
+                      <h4>$2799</h4>
+                      <button class="sb-btn my-3">Buy Now<i class="fas fa-angle-right"></i></button>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="images/bags/bag-3.png" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Reebok All Terrian</h5>
+                      <p class="card-text py-3">This is a wider card with supporting text below as a natural additional content.</p>
+                      <h4>$999</h4>
+                      <button class="sb-btn my-3">Buy Now<i class="fas fa-angle-right"></i></button>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+
         </div>
     </section>
 
+    <section class="contact" id="contact">
+      <div class="container py-5">
+        <div class="inner-contact rounded py-5">
+          <div class="contents text-center py-2">
+            <h2>GET IN TOUCH</h2>
+            <p class="text-muted">Get updates on sales specils and more</p>
+          </div>
+          <div class="form text-center pb-2">
+            <form action="" class="d-flex align-items-center justify-content-center">
+            <input type="text" name="" class="in-txt" id="">
+            <input type="submit" value="Send" class="send-btn"></form>
+          </div>
+        </div>
+      </div>
+      
+    </section>
 
-    <script src="/js/bootstrap.min.js">
-    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
