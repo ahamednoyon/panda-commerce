@@ -19,6 +19,7 @@
         }
         .banner-bg{
             background: #FEEAE9;
+            border-radius: 10px;
         }
 
         .price{
@@ -60,6 +61,7 @@
 
         .cat-item{
             border-radius: 10px;
+            cursor: pointer;
         }
         .cat-item h2{
             color: #fff;
@@ -109,6 +111,10 @@
           color: #fff;
           border-radius:  0px 5px 5px 0px;
         }
+
+        .footer{
+          background: #F8F8F8;
+        }
     
 
     </style>
@@ -121,7 +127,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <form class="d-md-flex d-none">
+                <form class="d-lg-flex d-none">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn search-btn" type="submit">Search</button>
                 </form>
@@ -131,7 +137,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#products">Products</a>
+                        <a class="nav-link" href="#category">Products</a>
                         </li>
                         <li class="nav-item">
                         <a class="nav-link" href="#about">About Us</a>
@@ -148,52 +154,52 @@
     <section class="pt-5" id="banner">
         <div class="container py-5">
             <div id="carouselExampleIndicators" class="carousel slide banner-bg" data-bs-ride="carousel">
-                <div class="carousel-indicators">
+                <div class="carousel-indicators mb-5 mb-md-3 py-4 py-md-3">
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
-                  <div class="carousel-item py-3 active">
+                  <div class="carousel-item py-3 active mb-2 mb-md-0">
                       <div class="row d-flex justify-content-between align-items-center px-5">
                           <div class="col-md-8">
                               <h1>Mi LED TV 4A PRO 32</h1>
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, vitae. Aut qui veniam soluta doloremque iste quisquam tempora. Modi est accusantium doloremque sapiente optio cumque, esse maxime necessitatibus nemo impedit.</p>
-                              <h1 class="price">$1289</h1>
-                              <button class="custom-btn">Buy Now<i class="fas fa-angle-right"></i></button>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut unde blanditiis, sequi temporibus ipsum quidem.</p>
+                              <h1 class="price mt-md-4 mb-md-2 mt-3 mb-3">$1289</h1>
+                              <button class="custom-btn ">Buy Now<i class="fas fa-angle-right"></i></button>
                           </div>
-                          <div class="col-md-4">
+                          <div class="col-md-4 order-first order-md-last">
                             <img src="images/banner-images/tv.png" class="d-block w-100" alt="...">
                           </div>
                       </div>
                   </div>
-                  <div class="carousel-item py-3 ">
+                  <div class="carousel-item py-3 mb-2 mb-md-0">
                     <div class="row d-flex justify-content-between align-items-center px-5">
                         <div class="col-md-8">
                             <h1>Cool Dude Headphone</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, vitae. Aut qui veniam soluta doloremque iste quisquam tempora. Modi est accusantium doloremque sapiente optio cumque, esse maxime necessitatibus nemo impedit.</p>
-                            <h1 class="price">$650</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, voluptates temporibus obcaecati nesciunt aliquam soluta!</p>
+                            <h1 class="price mt-md-4 mb-md-2 mt-3 mb-3">$650</h1>
                             <button class="custom-btn">Buy Now<i class="fas fa-angle-right"></i></button>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 order-first order-md-last">
                           <img src="images/banner-images/headphone.png" class="d-block w-100" alt="...">
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item py-3">
+                 </div>
+                 <div class="carousel-item py-3 mb-2 mb-md-0">
                     <div class="row d-flex justify-content-between align-items-center px-5">
                         <div class="col-md-8">
                             <h1>X-Box Pro</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, vitae. Aut qui veniam soluta doloremque iste quisquam tempora. Modi est accusantium doloremque sapiente optio cumque, esse maxime necessitatibus nemo impedit.</p>
-                            <h1 class="price">$420</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, nostrum ducimus saepe incidunt quae asperiores.</p>
+                            <h1 class="price mt-md-4 mb-md-2 mt-3 mb-3">$420</h1>
                             <button class="custom-btn">Buy Now<i class="fas fa-angle-right"></i></button>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 order-first order-md-last">
                           <img src="images/banner-images/xbox.png" class="d-block w-100" alt="...">
                         </div>
                     </div>
                 </div>
-                </div>
+               </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
@@ -206,7 +212,7 @@
         </div>
     </section>
 
-    <section class="category py-3">
+    <section class="category py-3" id="category">
         <div class="container py-2">
             <div class="section-title pb-3">
                 <h3>Categories</h3>
@@ -349,6 +355,24 @@
       </div>
       
     </section>
+
+    <footer class="footer py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="text-center text-md-start m-0 py-2">&copy; Copyright All right reserved by Noyon Rahman</p>
+          </div>
+          <div class="col-md-6">
+            <ul class="text-md-end text-center m-0 py-2">
+              <li class="d-inline mx-1"><a class="text-decoration-none text-muted" href="#">FAQS</a></li>
+              <li class="d-inline mx-1"><a class="text-decoration-none text-muted" href="#">Privacy</a></li>
+              <li class="d-inline mx-1"><a class="text-decoration-none text-muted" href="#">Policy</a></li>
+              <li class="d-inline mx-1 mx-md-0"><a class="text-decoration-none text-muted" href="#">Support</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
 
 
 
